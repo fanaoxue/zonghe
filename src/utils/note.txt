@@ -1,0 +1,9 @@
+项目中所有公共js方法 
+
+app.js 与客户交互方法集合
+
+cMethods 项目公共方法集合
+
+calc.js 项目中相关数据处理方法集合
+
+regularSets.js 正则集合

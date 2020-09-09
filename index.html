@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title></title>
+  <!-- <script
+    src="https://webapi.amap.com/maps?v=1.4.4&key=dcd4651c8b2e81e0818414f7b3b959cf&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.Geocoder"></script> -->
+  <% if (htmlWebpackPlugin.options.prodType == 'ktesting' || htmlWebpackPlugin.options.prodType == 'dev') { %>
+  <script src="//imgt.log56.com/test_js/city_data.js"></script>
+  <script>
+    var _mtac = { "senseHash": 0, "autoReport": 0 };
+    (function () {
+      var mta = document.createElement("script");
+      mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", "500675267");
+      mta.setAttribute("cid", "500675350");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+  </script>
+  <% } %>
+  <% if (htmlWebpackPlugin.options.prodType == 'production'|| htmlWebpackPlugin.options.prodType == 'pre') { %>
+  <script src="//imgt.log56.com/map_js/city_data.js"></script>
+  <script>
+    var _mtac = {};
+    (function () {
+      var mta = document.createElement("script");
+      mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", "500663501");
+      mta.setAttribute("cid", "500663508");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+  </script>
+  <% } %>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <% if ( htmlWebpackPlugin.options.prodType == 'dev') { %>
+  <script>
+    document.cookie = 'token=ZKuutcIQxLOvkoqSOPDTF/lhKFF3C6ucqUyYuKFRggJAth1C1bY1s2xxuQ4viQzjQPYbltlpF9Imi8+ASHVOiPFVnnOgItuhaeS3qEjlRzeYPU1ozfFm/W3bULR6HUM7bdtYeRur+UahjzzTtcmCNg=='
+  </script>
+  <% } %>
+  <% if ( htmlWebpackPlugin.options.prodType == 'dev' || htmlWebpackPlugin.options.prodType == 'ktesting'|| htmlWebpackPlugin.options.prodType == 'pre') { %>
+  <script src="static/js/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole();
+  </script>
+  <% } %>
+  <% if (htmlWebpackPlugin.options.prodType == 'production') { %>
+  <!-- 线上项目代码监测 -->
+  <script>
+    !(function (c, b, d, a) {
+      c[a] || (c[a] = {}); c[a].config = { pid: "ikhxs@fc7dc9f66ad587a", appType: "web", imgUrl: "https://arms-retcode.aliyuncs.com/r.png?", sendResource: true, enableLinkTrace: true, behavior: true, enableSPA: true, useFmp: true, enableConsole: true };
+      with (b) with (body) with (insertBefore(createElement("script"), firstChild)) setAttribute("crossorigin", "", src = d)
+    })(window, document, "https://retcode.alicdn.com/retcode/bl.js", "__bl");
+  </script>
+  <% } %>
+  <% if ( htmlWebpackPlugin.options.prodType == 'ktesting'||htmlWebpackPlugin.options.prodType == 'production'||htmlWebpackPlugin.options.prodType == 'pre') { %>
+  <script src="//imgt.log56.com/fecdn/js/vue.min.js"></script>
+  <% } %>
+</body>
+
+</html>
